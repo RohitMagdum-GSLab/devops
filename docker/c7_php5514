@@ -16,3 +16,5 @@ RUN wget -O php-5.5.14.tar.gz http://us.php.net/get/php-5.5.14.tar.gz/from/this/
 	cp php.ini-development /usr/local/lib/php.ini
 
 RUN echo "extension=/root/aerospike-client-php/src/aerospike/modules/aerospike.so" >> /usr/local/lib/php.ini
+
+RUN sed -i 's/port 9918/port 9914/' /etc/aerospike/aerospike.conf
