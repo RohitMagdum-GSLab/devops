@@ -10,3 +10,5 @@ RUN apt-get install -y libssl-dev
 # PIP packages
 #------------------------------------------------------------------------------
 RUN pip install pytest
+
+RUN sed -i 's/port 9918/port 9976/' /etc/aerospike/aerospike.conf

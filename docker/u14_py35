@@ -25,3 +25,5 @@ RUN pip install pytest
 RUN cp /usr/bin/python /usr/bin/oldpython && \
 	rm -rf /usr/bin/python && \
 	ln -s /usr/bin/python3.5 /usr/bin/python
+
+RUN sed -i 's/port 9918/port 9935/' /etc/aerospike/aerospike.conf
