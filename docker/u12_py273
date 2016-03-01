@@ -1,9 +1,11 @@
 FROM u12_core
 MAINTAINER Pavan Gupta <pavan.gupta@gslab.com>
 
-RUN	apt-get install -y python-pip && \
-	apt-get install -y python-dev && \
-	apt-get install -y libssl-dev
+RUN 	apt-get update
+RUN	apt-get install -y python-pip
+RUN	apt-get install -y libssl-dev
+RUN     apt-get install -y python-dev
+
 
 #------------------------------------------------------------------------------
 # PIP packages
