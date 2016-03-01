@@ -1,15 +1,16 @@
-FROM c6_core
+FROM u12_core
 MAINTAINER Pavan Gupta <pavan.gupta@gslab.com>
 
-RUN yum install -y autoconf
+RUN apt-get install -y autoconf libssl-dev
 
 #------------------------------------------------------------------------------
 # Build PHP From Source
 #------------------------------------------------------------------------------
-RUN yum install -y libxml2-devel
-RUN wget -O php-5.5.14.tar.gz http://us.php.net/get/php-5.5.14.tar.gz/from/this/mirror && \
-	tar -zxvf php-5.5.14.tar.gz && \
-	cd php-5.5.14 && \
+ENV PHP_VERSION 5.3.29
+RUN apt-get install -y libxml2-dev
+RUN wget -O php-${PHP_VERSION}.tar.gz http://us.php.net/get/php-${PHP_VERSION}.tar.gz/from/this/mirror && \
+	tar -zxvf php-${PHP_VERSION}.tar.gz && \
+	cd php-${PHP_VERSION} && \
 	./configure --enable-debug && \
 	make && \
 	make install && \
@@ -17,4 +18,4 @@ RUN wget -O php-5.5.14.tar.gz http://us.php.net/get/php-5.5.14.tar.gz/from/this/
 
 RUN echo "extension=/root/jenkins_work/workspace/php_conn_ubuntu/src/aerospike/modules/aerospike.so" >> /usr/local/lib/php.ini
 
-RUN sed -i 's/port 9918/port 9822/' /etc/aerospike/aerospike.conf
+RUN sed -i 's/port 9918/port 9800/' /etc/aerospike/aerospike.conf
