@@ -39,5 +39,16 @@ RUN dpkg -i aerospike-server-community-*/*.deb
 
 COPY aerospike.conf /etc/aerospike/
 
+#------------------------------------------------------------------------------
+# Valgrind
+#------------------------------------------------------------------------------
+ENV VALGRIND_VERSION 3.11.0
+RUN wget http://valgrind.org/downloads/valgrind-${VALGRIND_VERSION}.tar.bz2 && \
+	tar xvjf valgrind-${VALGRIND_VERSION}.tar.bz2  && \
+	cd valgrind-${VALGRIND_VERSION}  && \
+	./configure  && \
+	make && \
+	make install
+
 EXPOSE 22 3000 3001 3002 3003
 CMD ["/usr/sbin/sshd", "-D"]
