@@ -12,4 +12,4 @@ RUN yum -y install python-pip && \
 RUN pip install pytest
 #------------------------------------------------------------------------------
 
-RUN sed -i 's/port 9918/port 9966/' /etc/aerospike/aerospike.conf
+RUN sed -i 's/port 9918/port 9920/' /etc/aerospike/aerospike.conf

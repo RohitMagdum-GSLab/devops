@@ -10,4 +10,4 @@ RUN	apt-get install -y python-pip && \
 #------------------------------------------------------------------------------
 RUN pip install pytest
 
-RUN sed -i 's/port 9918/port 9973/' /etc/aerospike/aerospike.conf
+RUN sed -i 's/port 9918/port 9901/' /etc/aerospike/aerospike.conf
