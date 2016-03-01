@@ -42,9 +42,10 @@ COPY aerospike.conf /etc/aerospike/
 #------------------------------------------------------------------------------
 # Valgrind
 #------------------------------------------------------------------------------
-RUN wget http://valgrind.org/downloads/valgrind-3.9.0.tar.bz2 && \
-	tar xvjf valgrind-3.9.0.tar.bz2  && \
-	cd valgrind-3.9.0  && \
+ENV VALGRIND_VERSION 3.11.0
+RUN wget http://valgrind.org/downloads/valgrind-${VALGRIND_VERSION}.tar.bz2 && \
+	tar xvjf valgrind-${VALGRIND_VERSION}.tar.bz2  && \
+	cd valgrind-${VALGRIND_VERSION}  && \
 	./configure  && \
 	make && \
 	make install
