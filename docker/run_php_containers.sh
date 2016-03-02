@@ -14,6 +14,7 @@ docker run -itdp 1455:22 u14_php5530
 docker run -itdp 1456:22 u14_php5617
 
 # Centos 7
-docker run -itdp 75514:22 c7_php5514
+docker run -itdp 7553:22 c7_php5530
 
 # Centos 6 
+docker run -itdp 6553:22 c6_php5530

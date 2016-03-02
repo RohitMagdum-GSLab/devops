@@ -3,11 +3,11 @@
 # Ubuntu 12 
 docker run -itdp 12273:22 u12_py273
 
-# Ubuntu 14 
-docker run -itdp 14276:22 u14_py276
-docker run -itdp 1435:22 u14_py35
-docker run -itdp 1434:22 u14_py34
+# Ubuntu 14
 docker run -itdp 14269:22 u14_py269
+docker run -itdp 14276:22 u14_py276
+docker run -itdp 1434:22 u14_py34
+docker run -itdp 1435:22 u14_py35
 
 # ============================      CENTOS Containers    =============================
 # Centos 6 
