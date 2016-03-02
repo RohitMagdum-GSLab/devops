@@ -8,6 +8,7 @@ docker build -t u14_py276 -f u14_py276 .
 docker build -t u14_py35 -f u14_py35 .
 docker build -t u14_py34 -f u14_py34 .
 docker build -t u14_py269 -f u14_py269 .
+
 echo "=========>       Hurray! Done with Ubuntu images        <============="
 
 # Python Centos 6
