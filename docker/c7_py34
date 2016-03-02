@@ -21,7 +21,7 @@ RUN 	pip install pytest
 # Redirecting to default python
 #------------------------------------------------------------------------------
 RUN 	cp /usr/bin/python /usr/bin/pythonback && \
-	rm -rf /usr/bin/python && \
-	ln -s /usr/bin/python3.4 /usr/bin/python
+		rm -rf /usr/bin/python && \
+		ln -s /usr/bin/python3.4 /usr/bin/python
 
 RUN sed -i 's/port 9918/port 9932/' /etc/aerospike/aerospike.conf

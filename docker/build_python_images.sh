@@ -4,10 +4,10 @@
 docker build -t u12_py273 -f u12_py273 .
 
 # Python Ubuntu 14
-docker build -t u14_py276 -f u14_py276 .
-docker build -t u14_py35 -f u14_py35 .
-docker build -t u14_py34 -f u14_py34 .
 docker build -t u14_py269 -f u14_py269 .
+docker build -t u14_py276 -f u14_py276 .
+docker build -t u14_py34 -f u14_py34 .
+docker build -t u14_py35 -f u14_py35 .
 
 echo "=========>       Hurray! Done with Ubuntu images        <============="
 
