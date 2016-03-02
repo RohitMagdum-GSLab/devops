@@ -50,5 +50,6 @@ RUN wget http://valgrind.org/downloads/valgrind-${VALGRIND_VERSION}.tar.bz2 && \
 	make && \
 	make install
 
+#--------------------------------------------------------------------------------
 EXPOSE 22 3000 3001 3002 3003
 CMD ["/usr/sbin/sshd", "-D"]
