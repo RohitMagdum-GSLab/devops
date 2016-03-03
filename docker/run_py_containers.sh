@@ -12,6 +12,7 @@ docker run -itdp 1435:22 u14_py35
 # ============================      CENTOS Containers    =============================
 # Centos 6 
 docker run -itdp 6266:22 c6_py266
+docker run -itdp 6276:22 c6_py276
 docker run -itdp 6340:22 c6_py34
 docker run -itdp 6350:22 c6_py35
 

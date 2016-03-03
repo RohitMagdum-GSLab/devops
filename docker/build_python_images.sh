@@ -13,6 +13,7 @@ echo "=========>       Hurray! Done with Ubuntu images        <============="
 
 # Python Centos 6
 docker build -t c6_py266 -f c6_py266 .
+docker build -t c6_py276 -f c6_py276 .
 docker build -t c6_py34 -f c6_py34 .
 docker build -t c6_py35 -f c6_py35 .
 
